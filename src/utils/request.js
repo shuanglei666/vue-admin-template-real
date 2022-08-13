@@ -96,8 +96,8 @@
 import axios from "axios";
 
 const service = axios.create({
-//   baseURL: "https://lianghj.top:8888/api/private/v1/",//process.env.VUE_APP_BASE_API
-  baseURL: "process.env.VUE_APP_BASE_API",//
+  baseURL: "https://lianghj.top:8888/api/private/v1/",//process.env.VUE_APP_BASE_API
+//   baseURL: "process.env.VUE_APP_BASE_API",//
   timeout: 3000
 });
 
