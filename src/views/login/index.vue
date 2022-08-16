@@ -136,7 +136,7 @@ export default {
                             // console.log(res, 'chenggongle ');
                             //登录成功之后重定向到首页
                             this.loading = false
-                            this.$router.push({ path: this.redirect || '/' })
+                            this.$router.push({ path: this.redirect || '/' });
                         }).catch((err) => {
                             console.log(err, 'login ----- err');
                             this.loading = false

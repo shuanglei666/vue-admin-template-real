@@ -75,7 +75,6 @@ const actions = {
           //  resolve(response.data) // resolve()里面写值就代表返回login页面.then(res) 里面的就有值了,如果没写resolve()里面没传参数,就代表停止传参数,数据保留在这个方法里面response，
           // 打印不到数据,但是有,因为有return方法停止的意思打印不到,所以先把return注释，然后获取token,然后打开注释,就ok成功跳转了, 这样又加深对promise的理解了
 
-
           // 下面是登录状态提示
           const {
             msg,
@@ -98,13 +97,14 @@ const actions = {
         })
         .catch(error => {
           console.log(error, 'vux ---- error')
-          reject() // 异常方法, reject()里面写error代表返回到 登录页面登录方法的.then 后面的 .catch 方法里面  , 如果reject里面没有写error的,代表不返回.catch方法异常捕捉
+          reject()                  // 异常方法, reject()里面写error代表返回到 登录页面登录方法的.then 后面的 .catch 方法里面  , 如果reject里面没有写error的,代表不返回.catch方法异常捕捉
           //   Message({
           //     message: error,
           //     type: "error"
           //   });
         })
     })
+
   },
 
   // 获取用户信息
