@@ -95,10 +95,13 @@
 
 
 import axios from "axios";
+import {
+  Message
+} from 'element-ui';
 
 const service = axios.create({
-  baseURL: "https://lianghj.top:8888/api/private/v1/",//process.env.VUE_APP_BASE_API
-//   baseURL: "process.env.VUE_APP_BASE_API",//
+  baseURL: "https://lianghj.top:8888/api/private/v1/", //process.env.VUE_APP_BASE_API
+  //   baseURL: "process.env.VUE_APP_BASE_API",//
   timeout: 3000
 });
 
@@ -123,7 +126,11 @@ service.interceptors.request.use(
 //响应拦截器
 service.interceptors.response.use(
   function (response) {
-    return response;
+    if (response.data.meta.status == 200) return response
+    else Message({
+      message: response.data.meta.msg,
+      type: "error"
+    });
   },
   function (error) {
     return Promise.reject(error);

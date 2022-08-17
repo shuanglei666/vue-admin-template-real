@@ -14,9 +14,11 @@ export default {
             'name'
         ])
     },
-    mounted(){
+    mounted () {
     }
 }
+
+
 </script>
 
 <style lang="scss" scoped>

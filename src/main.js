@@ -12,7 +12,7 @@ import App from './App'
 import store from './store'
 import router from './router'
 
-import '@/permission' // permission control
+import '@/permission' // permission control // 路由守卫
 
 
 import '@/icons' // icon
